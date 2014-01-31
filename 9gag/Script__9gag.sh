@@ -36,7 +36,8 @@ done
  
 #fonction qui permet l'envoi des mails
 function envoiMail() { 
-echo "Ci-joint 10 gifs 9gag !!" | mutt -s "Les gifs de 9gag" -a *.gif -- $email
+echo "Ci-joint 10 gifs 9gag !!" | mutt -s "Les gifs de 9gag" -a *.gif -- $emaill
+echo " Envoie mail a $emaill"
 }
 
 #boite de dialogue qui demande si l'utilisateur veut recevoir des mails avec les gif de 9gag
@@ -64,7 +65,7 @@ done
 
 if [ $reponse == "Y" ]
 then
-read -p "Entrez votre email" email
+read -p "Entrez votre email : " emaill
 envoiMail
 
 echo "Vous recevrez très bientot votre quotidienne des gif 9gag"
